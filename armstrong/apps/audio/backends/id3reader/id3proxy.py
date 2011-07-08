@@ -1,7 +1,7 @@
 #wrapper for the id3reader.py
 from id3reader import Reader
 
-from armstrong.core.arm_content.audio import AudioBackend
+from armstrong.apps.audio.backends import AudioBackend
 
 
 class Id3readerBackend(AudioBackend):
