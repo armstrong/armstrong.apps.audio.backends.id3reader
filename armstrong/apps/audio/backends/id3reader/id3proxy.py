@@ -3,7 +3,7 @@ from id3reader import Reader
 
 
 
-class Id3readerBackend():
+class Id3readerBackend(object):
     """
         wrapper for the "don't make me regret this licensed"
         id3 reader written by Ned Batchelder

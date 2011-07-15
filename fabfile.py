@@ -1,7 +1,8 @@
 import unittest
-from fabric.decorators import task
+from fabric.decorators import *
+from armstrong.apps.audio.backends.id3reader.tests import Id3ReaderTestCase 
 
 @task 
 def test():
-    from armstrong.apps.audio.backends.id3reader.tests import * 
-    unittest.main()
+    suite = unittest.TestLoader().loadTestsFromTestCase(Id3ReaderTestCase)
+    unittest.TextTestRunner(verbosity=2).run(suite)
