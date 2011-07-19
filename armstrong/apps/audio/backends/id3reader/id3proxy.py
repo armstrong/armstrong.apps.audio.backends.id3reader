@@ -2,7 +2,6 @@
 from id3reader import Reader
 
 
-
 class Id3readerBackend(object):
     """
         wrapper for the "don't make me regret this licensed"
