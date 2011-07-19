@@ -1,4 +1,3 @@
 include README.rst
 include package.json
-include armstrong/cli/templates/standard/requirements/*.txt
 prune build/*

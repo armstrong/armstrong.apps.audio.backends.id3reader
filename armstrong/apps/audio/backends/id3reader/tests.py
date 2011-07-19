@@ -1,6 +1,7 @@
 import unittest
 from .id3proxy import Id3readerBackend
 
+
 class Id3ReaderTestCase(unittest.TestCase):
     filetype = 'mp3'
     audio_metadata = {'album': u'from the internet',
@@ -9,9 +10,10 @@ class Id3ReaderTestCase(unittest.TestCase):
                      'genre': u'Satire',
                      'date': u'2011',
                      'tracknumber': u'1'}
-    backend=Id3readerBackend()
+    backend = Id3readerBackend()
+
     def setUp(self):
-        self.file = open('test_audio_files/test.mp3','rb+')
+        self.file = open('test_audio_files/test.mp3', 'rb+')
 
     def test_metadata(self):
         """
@@ -19,11 +21,11 @@ class Id3ReaderTestCase(unittest.TestCase):
         """
         metadata = self.backend.metadata(file=self.file)
         for fieldname, value in self.audio_metadata.items():
-            self.assertEqual( value, metadata[fieldname])
+            self.assertEqual(value, metadata[fieldname])
 
     def test_filetype(self):
         """
-        confirm expected filetype 
+        confirm expected filetype
         """
         filetype = self.backend.filetype(file=self.file)
         self.assertEqual(self.filetype, filetype)
@@ -31,3 +33,6 @@ class Id3ReaderTestCase(unittest.TestCase):
     def runTest(self):
         self.test_metadata()
         self.test_filetype()
+
+
+suite = unittest.TestLoader().loadTestsFromTestCase(Id3ReaderTestCase)
