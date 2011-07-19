@@ -31,3 +31,6 @@ class Id3ReaderTestCase(unittest.TestCase):
     def runTest(self):
         self.test_metadata()
         self.test_filetype()
+
+
+suite = unittest.TestLoader().loadTestsFromTestCase(Id3ReaderTestCase)
