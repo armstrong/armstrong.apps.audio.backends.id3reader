@@ -1,0 +1,5 @@
+{
+    "name": "armstrong.apps.audio.backends.id3reader",
+    "version": "0.1.0.alpha.0",
+    "description": "A audio metadata backend for arm_content's audio file"
+}
